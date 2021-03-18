@@ -53,3 +53,14 @@ fun printUserInfo3(firstName: String, lastName: String, age: Int, isSunburned: B
     println("$firstName $lastName is of age $age. Sunburned: $isSunburned, likes Movies: $likesMovies, loves Popcorn: $lovesPopcorn")
 
 }
+
+//How to provide multiple arguments of the same type with vararg
+fun main4(){
+    printBookInfo("The Alchemist", "Paulo Coelho","Margaret Ogolla","Abdisalam Osman", "Najma Swaleh")
+}
+
+fun printBookInfo(title: String, vararg authors: String){
+    println("$title - Authors: ")
+    authors.forEach { println(it) }
+
+}
