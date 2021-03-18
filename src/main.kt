@@ -30,9 +30,26 @@ fun printUserInfo(firstName: String, lastName: String, age: Int, isSunburned: Bo
 fun main2(){
     printUserInfo2(firstName = "Buyole", lastName = "Isako", age = 32)
     printUserInfo2(firstName = "Arbe", lastName = "Sharamo", age = 33)
-    printUserInfo2(firstName = "Buyole", lastName = "Isako", age = 34)
+    printUserInfo2(firstName = "Buyole", lastName = "Ahmed", age = 34)
 }
 fun printUserInfo2(firstName: String, lastName: String, age: Int, isSunburned: Boolean = false, likesMovies: Boolean = true, lovesPopcorn: Boolean = true){
+    println("$firstName $lastName is of age $age. Sunburned: $isSunburned, likes Movies: $likesMovies, loves Popcorn: $lovesPopcorn")
+
+}
+//function refactoring to new lines and named arguments in intellij
+
+fun main3(){
+    printUserInfo3(
+        age = 32,
+        isSunburned = false,
+        firstName = "Buyole",
+        lastName = "Isako",
+        likesMovies = true,
+        lovesPopcorn = true
+    )
+}
+
+fun printUserInfo3(firstName: String, lastName: String, age: Int, isSunburned: Boolean = false, likesMovies: Boolean = true, lovesPopcorn: Boolean = true){
     println("$firstName $lastName is of age $age. Sunburned: $isSunburned, likes Movies: $likesMovies, loves Popcorn: $lovesPopcorn")
 
 }
