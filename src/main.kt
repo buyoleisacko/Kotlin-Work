@@ -26,3 +26,13 @@ fun printUserInfo(firstName: String, lastName: String, age: Int, isSunburned: Bo
 }
 
 //How to use Default Argument Values in Kotlin
+
+fun main2(){
+    printUserInfo2(firstName = "Buyole", lastName = "Isako", age = 32)
+    printUserInfo2(firstName = "Arbe", lastName = "Sharamo", age = 33)
+    printUserInfo2(firstName = "Buyole", lastName = "Isako", age = 34)
+}
+fun printUserInfo2(firstName: String, lastName: String, age: Int, isSunburned: Boolean = false, likesMovies: Boolean = true, lovesPopcorn: Boolean = true){
+    println("$firstName $lastName is of age $age. Sunburned: $isSunburned, likes Movies: $likesMovies, loves Popcorn: $lovesPopcorn")
+
+}
