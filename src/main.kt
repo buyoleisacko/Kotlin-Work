@@ -1,4 +1,3 @@
-
 //How to use function arguments in kotlin
 fun main1(){
     doWork(21, "Buyole", false)
@@ -64,3 +63,57 @@ fun printBookInfo(title: String, vararg authors: String){
     authors.forEach { println(it) }
 
 }
+//How to overload a function in Kotlin
+
+fun main5(){
+    printUserInfo4("John")
+    printUserInfo4("Walker", 37)
+    printUserInfo4("Allan", 22, "Purple")
+}
+
+fun printUserInfo4(name: String, age: Int = 0, favColor: String = "") {
+    println("Name: $name, Age: $age, fav Color: $favColor" )
+}
+
+//How to create a class in Kotlin
+
+fun main6(){
+    var user = User()
+    user.printFullName()
+    user.updateName("Bob")
+    user.printFullName()
+    user.printWithPrefix("Mr.")
+
+
+
+
+    var friend = User()
+    friend.firstName = "Ali"
+    friend.lastName = "Hassan"
+    friend.printFullName()
+    friend.printWithPrefix("Ms.")
+    friend.firstNameLength()
+
+}
+
+//primary class constructors in kotlin
+
+fun main7(){
+    var user = User(firstName = "Donn" , lastName = "Allan")
+    user.printFullName()
+    user.updateName("Bob")
+    user.printFullName()
+    user.printWithPrefix("Mr.")
+
+
+
+
+    var friend = User(firstName = "Ali" , lastName = "Hassan")
+    friend.printFullName()
+    friend.printWithPrefix("Ms.")
+    friend.firstNameLength()
+
+}
+
+
+
